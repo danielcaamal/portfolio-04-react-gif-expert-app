@@ -7,7 +7,6 @@ export const getGifs = async (category: string) => {
     api_url.searchParams.set('limit', '10')
 
     const response = await fetch(api_url.toString());
-    if (!response.ok) throw new Error(response.statusText);
     const { data } = await response.json();
     const gifs: GiphInterface[] = data.map((img: GiphyInterface) => ({
         id: img.id,

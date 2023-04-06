@@ -21,12 +21,13 @@ export const AddCategory = ({
     }
 
     return (
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} id="add-category-form">
             <input
                 type="text"
                 placeholder="Search a Gif"
                 value={inputValue}
                 onChange={onInputChange}
+                id="add-category-input"
             />
         </form>
     )
